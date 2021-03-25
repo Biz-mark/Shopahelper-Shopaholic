@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Generators;
+<?php namespace BizMark\Shopahelper\Console\Generators;
 
 use Illuminate\Console\Command;
 

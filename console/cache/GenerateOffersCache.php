@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Cache;
+<?php namespace BizMark\Shopahelper\Console\Cache;
 
 use Illuminate\Console\Command;
 

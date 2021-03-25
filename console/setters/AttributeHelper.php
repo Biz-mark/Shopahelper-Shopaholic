@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Setters;
+<?php namespace BizMark\Shopahelper\Console\Setters;
 
 use App;
 use Lovata\Shopaholic\Models\Product;

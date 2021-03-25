@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Linkers;
+<?php namespace BizMark\Shopahelper\Console\Linkers;
 
 use Lovata\Shopaholic\Models\Brand;
 use Lovata\Shopaholic\Models\Category;
@@ -59,6 +59,7 @@ trait LinkHelper
         try {
             $obSlave->{$masterField} = $obMaster->id;
             $obSlave->save();
+            $this->info('Linking success');
         } catch (\Exception $ex){
             $this->output->writeln(sprintf("Linking #%s to #%s caused some troubles, look at console", $obSlave->id, $obMaster->id));
             trace_log($ex);

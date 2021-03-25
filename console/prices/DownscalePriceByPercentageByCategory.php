@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Prices;
+<?php namespace BizMark\Shopahelper\Console\Prices;
 
 use Illuminate\Console\Command;
 

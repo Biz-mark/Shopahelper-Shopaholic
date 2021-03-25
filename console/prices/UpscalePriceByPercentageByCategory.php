@@ -1,7 +1,8 @@
-<?php namespace BizMark\ShopaHelper\Console\Prices;
+<?php namespace BizMark\Shopahelper\Console\Prices;
 
 use Illuminate\Console\Command;
 
+use Lovata\Shopaholic\Classes\Collection\ProductCollection;
 use Lovata\Shopaholic\Models\Brand;
 use Lovata\Shopaholic\Models\Product;
 
@@ -28,13 +29,19 @@ class UpscalePriceByPercentageByCategory extends Command
     public function handle()
     {
         $this->output->writeln('Starting of price upscaling');
-        $obProducts = Product::where('category_id', $this->argument('category'))->get();
+        if ($this->argument('category_tree') == true) {
+            $arProducts = ProductCollection::make()->category($this->argument('category'), true)->getIDList();
+            $obProducts = Product::whereIn('id', $arProducts)->get();
+        } else {
+            $obProducts = Product::where('category_id', $this->argument('category'))->get();
+        }
 
         foreach ($obProducts as $obProduct){
             foreach ($obProduct->offer as $obOffer){
                 $this->upscalePricePercentage($obOffer);
             }
         }
+
         $this->output->writeln('Price upscaling by percentage ended successfully');
     }
 
@@ -47,6 +54,7 @@ class UpscalePriceByPercentageByCategory extends Command
         return [
             ['percentage', InputArgument::REQUIRED, 'Percentage of scale'],
             ['category', InputArgument::REQUIRED, 'Category ID'],
+            ['category_tree', InputArgument::REQUIRED, 'Process products from subcategories'],
         ];
     }
 

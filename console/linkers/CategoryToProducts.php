@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Linkers;
+<?php namespace BizMark\Shopahelper\Console\Linkers;
 
 use Illuminate\Console\Command;
 
@@ -29,7 +29,7 @@ class CategoryToProducts extends Command
      */
     public function handle()
     {
-        $obCategory = Category::active()->find($this->argument('category'));
+        $obCategory = Category::find($this->argument('category'));
         if (empty($obCategory)) {
             $this->output->writeln(sprintf("Category with id %s not found", $this->argument('category')));
             return;

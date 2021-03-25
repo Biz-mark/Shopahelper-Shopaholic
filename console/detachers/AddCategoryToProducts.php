@@ -1,4 +1,4 @@
-<?php namespace BizMark\Shopahelper\Console\Linkers;
+<?php namespace BizMark\Shopahelper\Console\Detachers;
 
 use Illuminate\Console\Command;
 
@@ -8,19 +8,19 @@ use Lovata\Shopaholic\Models\Category;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class AddCategoriesToProducts extends Command
+class AddCategoryToProducts extends Command
 {
-    use LinkHelper;
+    use DetachHelper;
 
     /**
      * @var string The console command name.
      */
-    protected $name = 'shopahelper:link.add-categories-to-products';
+    protected $name = 'shopahelper:detach.add-category-from-products';
 
     /**
      * @var string The console command description.
      */
-    protected $description = 'Linking additional categories to products by id\'s or array of id\'s ';
+    protected $description = 'Detaching additional categories from products by id\'s or array of id\'s ';
 
     /**
      * Execute the console command.
@@ -34,8 +34,8 @@ class AddCategoriesToProducts extends Command
             return;
         }
 
-        $this->linkArrayOrSingle($obCategory, $this->argument('products'), Product::class, 'additional_category', true);
-        $this->output->writeln('Additional category linking successfully ended');
+        $this->detachArrayOrSingle($obCategory, $this->argument('products'), Product::class, 'additional_category', true);
+        $this->output->writeln('Detaching additional category from products successfully ended');
     }
 
     /**

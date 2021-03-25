@@ -1,4 +1,4 @@
-<?php namespace BizMark\ShopaHelper\Console\Linkers;
+<?php namespace BizMark\Shopahelper\Console\Linkers;
 
 use Illuminate\Console\Command;
 
