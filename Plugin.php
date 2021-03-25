@@ -63,10 +63,6 @@ class Plugin extends PluginBase
 
         // Setters
         $this->registerConsoleCommand('shopahelper:set.attribute', 'BizMark\ShopaHelper\Console\Setters\SetAttribute');
-
-        // Workers
-        $this->registerConsoleCommand('shopahelper:work.products', 'BizMark\ShopaHelper\Console\Import\ProductsWorker');
-        $this->registerConsoleCommand('shopahelper:work.products.attributes', 'BizMark\ShopaHelper\Console\Import\ProductsPropertyWorker');
     }
 
     /**
