@@ -8,6 +8,9 @@ use System\Classes\PluginBase;
  */
 class Plugin extends PluginBase
 {
+    /** @var array Plugin dependencies */
+    public $require = ['Lovata.Shopaholic'];
+
     /**
      * Returns information about this plugin.
      *

@@ -28,6 +28,12 @@ Shopahelper is a basic bulk tool that helps you to manage your catalog.
         - `shopahelper:link.add-category-to-products-by-add-category {target_category_id} {current_category_id}` - Link Additional Category by ID to Products that has additional category by ID
     - `shopahelper:link.add-category-to-products-by-category {target_category_id} {current_category_id}` - Link Additional Category by ID to Products that has main Category by ID
 
+### Detachers
+
+- `{products}` - In that variable you can pass a single ID or Multiple ID's separated by commas.
+
+- `shopahelper:detach.add-category-from-products {category} {products}` - Detaches Additional Category from Products by ID's separated by comma
+
 ### Prices
 
 - `{products}` - In that variable you can pass a single ID or Multiple ID's separated by commas. Example: `shopahelper:price.upscale-by-percentage 10 13,14,15` - Upscale offers price by 10% in Products with id's 13,14,15
