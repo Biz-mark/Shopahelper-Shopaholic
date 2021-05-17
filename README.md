@@ -3,11 +3,11 @@
 Shopahelper is a basic bulk tool that helps you to manage your catalog.
 
 ### Caching:
-- `shopahelper.cache.all {chunk}` - Cache all Products, Brands, Categories, Offers by chunks with N items.
-- `shopahelper.cache.products {chunk}` - Cache Products by chunks with N products. 
-- `shopahelper.cache.brands {chunk}` - Cache Brands by chunks with N brands.
-- `shopahelper.cache.categories {chunk}` - Cache Categories by chunks with N categories.
-- `shopahelper.cache.offers {chunk}` - Cache Offers by chunks with N offers.
+- `shopahelper:cache.all {chunk}` - Cache all Products, Brands, Categories, Offers by chunks with N items.
+- `shopahelper:cache.products {chunk}` - Cache Products by chunks with N products. 
+- `shopahelper:cache.brands {chunk}` - Cache Brands by chunks with N brands.
+- `shopahelper:cache.categories {chunk}` - Cache Categories by chunks with N categories.
+- `shopahelper:cache.offers {chunk}` - Cache Offers by chunks with N offers.
 
 ### Generators
 - `shopahelper:generate.offers` - Generating offers for each product that doesn't have it.
