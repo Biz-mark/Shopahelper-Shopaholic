@@ -1,0 +1,8 @@
+{
+    "name": "bizmark/shopahelpershopaholic-plugin",
+    "type": "october-plugin",
+    "description": "The almighty helper in bulk actions for Shopaholic",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
