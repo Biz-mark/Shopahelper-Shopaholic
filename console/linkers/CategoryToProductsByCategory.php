@@ -1,7 +1,7 @@
 <?php namespace BizMark\Shopahelper\Console\Linkers;
 
 use Illuminate\Console\Command;
-use Lovata\GoodNews\Models\Category;
+use Lovata\Shopaholic\Models\Category;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
