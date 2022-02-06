@@ -39,6 +39,10 @@ class Plugin extends PluginBase
         $this->registerConsoleCommand('shopahelper:cache.products', 'BizMark\Shopahelper\Console\Cache\GenerateProductsCache');
         $this->registerConsoleCommand('shopahelper:cache.offers', 'BizMark\Shopahelper\Console\Cache\GenerateOffersCache');
         $this->registerConsoleCommand('shopahelper:cache.brands', 'BizMark\Shopahelper\Console\Cache\GenerateBrandsCache');
+        $this->registerConsoleCommand('shopahelper:cache.measure', 'BizMark\ShopaHelper\Console\Cache\GenerateMeasureCache');
+        $this->registerConsoleCommand('shopahelper:cache.properties', 'BizMark\ShopaHelper\Console\Cache\GeneratePropertyCache');
+        $this->registerConsoleCommand('shopahelper:cache.propertysets', 'BizMark\ShopaHelper\Console\Cache\GeneratePropertySetCache');
+        $this->registerConsoleCommand('shopahelper:cache.propertyvalues', 'BizMark\ShopaHelper\Console\Cache\GeneratePropertyValueCache');
 
         // Linkers
         //// Brands

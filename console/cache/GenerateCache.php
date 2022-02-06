@@ -6,11 +6,18 @@ use Lovata\Shopaholic\Models\Brand;
 use Lovata\Shopaholic\Models\Offer;
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Models\Category;
+use Lovata\PropertiesShopaholic\Models\Property;
+use Lovata\PropertiesShopaholic\Models\PropertySet;
+use Lovata\PropertiesShopaholic\Models\PropertyValue;
 
 use Lovata\Shopaholic\Classes\Item\BrandItem;
 use Lovata\Shopaholic\Classes\Item\OfferItem;
 use Lovata\Shopaholic\Classes\Item\ProductItem;
 use Lovata\Shopaholic\Classes\Item\CategoryItem;
+use Lovata\Shopaholic\Classes\Item\MeasureItem;
+use Lovata\PropertiesShopaholic\Classes\Item\PropertyItem;
+use Lovata\PropertiesShopaholic\Classes\Item\PropertySetItem;
+use Lovata\PropertiesShopaholic\Classes\Item\PropertyValueItem;
 
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -35,11 +42,14 @@ class GenerateCache extends Command
      */
     public function handle()
     {
-        $this->output->writeln('Starting process of caching Categories, Products, Offers, Brands');
         $this->generateCache('Category', Category::class, CategoryItem::class);
         $this->generateCache('Product', Product::class, ProductItem::class);
         $this->generateCache('Offer', Offer::class, OfferItem::class);
         $this->generateCache('Brand', Brand::class, BrandItem::class);
+        $this->generateCache('Measure', Measure::class, MeasureItem::class);
+        $this->generateCache('Property', Property::class, PropertyItem::class);
+        $this->generateCache('PropertySet', PropertySet::class, PropertySetItem::class);
+        $this->generateCache('PropertyValue', PropertyValue::class, PropertyValueItem::class);
     }
 
     /**
@@ -48,9 +58,7 @@ class GenerateCache extends Command
      */
     protected function getArguments()
     {
-        return [
-            ['chunks', InputArgument::REQUIRED, 'How many chunks of each collection to iterate. (2, 3, 4 and etc.)'],
-        ];
+        return [];
     }
 
     /**

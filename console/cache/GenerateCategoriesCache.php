@@ -37,9 +37,7 @@ class GenerateCategoriesCache extends Command
      */
     protected function getArguments()
     {
-        return [
-            ['chunks', InputArgument::REQUIRED, 'How many chunks of each collection to iterate. (2, 3, 4 and etc.)'],
-        ];
+        return [];
     }
 
     /**
