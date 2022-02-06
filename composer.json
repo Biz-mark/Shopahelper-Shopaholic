@@ -1,5 +1,5 @@
 {
-    "name": "bizmark/shopahelpershopaholic-plugin",
+    "name": "bizmark/shopahelper-plugin",
     "type": "october-plugin",
     "description": "The almighty helper in bulk actions for Shopaholic",
     "require": {
