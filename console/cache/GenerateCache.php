@@ -6,6 +6,7 @@ use Lovata\Shopaholic\Models\Brand;
 use Lovata\Shopaholic\Models\Offer;
 use Lovata\Shopaholic\Models\Product;
 use Lovata\Shopaholic\Models\Category;
+use Lovata\Shopaholic\Models\Measure;
 use Lovata\PropertiesShopaholic\Models\Property;
 use Lovata\PropertiesShopaholic\Models\PropertySet;
 use Lovata\PropertiesShopaholic\Models\PropertyValue;
